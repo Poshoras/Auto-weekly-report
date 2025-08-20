@@ -60,3 +60,24 @@ FF车间加入冷风机防中暑
 
 改进点集中于：<br>
 1.取消type变量和is_done变量，改为AI自动识别
+
+
+
+# workflow 初步尝试：以safety为例
+Few shot
+example在prompt中，分类由分类器实现；
+每种类别学习不同的例子；
+LLM做英文转换；
+结果示例：
+标准：
+1. Launch the targeted project (door interlock mechanism) to enhance safety protocols and risk mitigation for the Z-Calender 
+2. Deliver health and safety training based on occupational health screening results
+3. Finalize comprehensive EHS inspections before shutdown, with emphasis on VOC protocols to prevent regulatory exceedances
+
+AI输出：
+1. Initiate the door lock project and continue advancing the safety upgrade of the Z-rolling machine to enhance equipment operational safety and operational reliability;  
+2. Conduct targeted health and safety training based on employee health examination results to strengthen employees' health awareness and risk prevention capabilities;  
+3. Strictly enforce the pre-shutdown EHS inspection procedure, with particular focus on verifying VOC emission limits, ensuring compliance with environmental protection standards and on-site safety requirements.
+
+# workflow 改进：用户会把一大坨东西输入进来，进行自动识别然后再fewshot，最后整体输出分点列项的文字。
+
