@@ -80,4 +80,6 @@ AI输出：
 3. Strictly enforce the pre-shutdown EHS inspection procedure, with particular focus on verifying VOC emission limits, ensuring compliance with environmental protection standards and on-site safety requirements.
 
 # workflow 改进：用户会把一大坨东西输入进来，进行自动识别然后再fewshot，最后整体输出分点列项的文字。
+最重要的问题就是分类，如何把用户一大坨的输入分成不同的类别是重中之重。
 
+在经过分类器/迭代/条件分支等一系列尝试后失败，最后选择了用LLM分类。
