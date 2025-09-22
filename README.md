@@ -187,11 +187,30 @@ By discussion，把输入变量裂成两份，这样一来，即便users午饭�
 
 Flask/Fastapi是一个编写api的包，也就是将python作为一个开源的软件，利用dify中code节点的request请求，使其在外部独立运行。
 
-'''python'''
+```python
 import requests
 
 def main():
     files = {"file": open("data.csv", "rb")}
     resp = requests.post("http://localhost:8000/process", files=files)
     return resp.json()
+```
+这是在dify中运行的代码，其中files = /input{raw_file}
 
+```python
+from fastapi import FastAPI, File, UploadFile
+import pandas as pd
+
+app = FastAPI()
+
+@app.post("/process")
+async def process(file: UploadFile = File(...)):
+    df = pd.read_csv(file.file)  
+    result = df["value"].mean()  
+    return {"mean": result}
+```
+这是在Vscode中运行的内容，**process**是主函数，file一定要和代码在同一个目录下，不然是无法识别的。
+
+**不推荐使用这种方法，因为这需要搭建一个云数据库，访问的时候很容易掉线**
+
+多嘴说一句，直接在dify中安装库是没有必要的，docker环境对于user并不友好，操作难度大。
