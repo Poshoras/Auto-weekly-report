@@ -181,3 +181,17 @@ By discussion，把输入变量裂成两份，这样一来，即便users午饭�
 第二个是数据到文本，此处的核心是LLM的提示词。
 
 第三个已经做好了，refine自然语言。
+
+# 如何调用外部的python
+在dify中安装一个包是解决不了这个问题的，因为数据集太大了，在沙盒中根本跑不起来。
+
+Flask/Fastapi是一个编写api的包，也就是将python作为一个开源的软件，利用dify中code节点的request请求，使其在外部独立运行。
+
+'''python'''
+import requests
+
+def main():
+    files = {"file": open("data.csv", "rb")}
+    resp = requests.post("http://localhost:8000/process", files=files)
+    return resp.json()
+
