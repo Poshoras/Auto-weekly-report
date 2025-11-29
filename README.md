@@ -16,15 +16,15 @@ Areas for improvement:
 ### How to help it learn from more examples?
 ### I want to discuss this with colleagues who write daily reports.
 
-# 测试用例
-** 以Safety 为例：Kunshan，0722 **
+# Test Case
+**Using Safety as an example: Kunshan, 0722**
 
-假设的输入：
-20个外包司机能力测试都过关了
+Hypothetical input:
+All 20 outsourced drivers have passed the capability test.
 
-自由滚筒全面检查消除了4处危险夹点，更新了OPL
+A full inspection of the free-roller conveyor eliminated four hazardous pinch points, and the OPL has been updated.
 
-FF车间加入冷风机防中暑
+The FF workshop added cooling fans to prevent heatstroke.
 
 
 | 模型 | 提示词 | 输出 |评价|
