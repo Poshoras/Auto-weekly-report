@@ -3,21 +3,18 @@
 My collegues input some data or variables,a report will be generated in a few seconds via AI agent.
 
 
-# 工作流程
-先从chatbot开始，唯一的变量是type，因为不同主题之间选用的扩充润色词汇不尽相同。
+# Workflow
+Start with the chatbot, where the only variable is type, since different topics require different expansion and refinement vocabularies.
 
-Prompt是主要的来源
+The prompt serves as the primary source.
 
-优化点：
-1.COT，SC，TOT等方法的叠加；
+Areas for improvement:
 
-2.改成英文；
-
-3.怎么能控制它不要乱说话？；
-
-4.怎么能让它学到更多的例子？；
-
-5.我想要和写日报的同事交流一下。
+### Stacking methods such as CoT, SC, and ToT.
+### Converting everything into English.
+### How to control it so that it doesn’t generate irrelevant content?
+### How to help it learn from more examples?
+### I want to discuss this with colleagues who write daily reports.
 
 # 测试用例
 ** 以Safety 为例：Kunshan，0722 **
